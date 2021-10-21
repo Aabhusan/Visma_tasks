@@ -1,0 +1,9 @@
+version: "3"
+services:
+  api:
+    build: .
+    image: node_hello_world
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8080"

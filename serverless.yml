@@ -1,0 +1,18 @@
+service: hello-function
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  test:
+    # this is formatted as <FILENAME>.<HANDLER>
+    handler: hello.handler
+    events:
+    - http:
+        path: web
+        method: get
+
